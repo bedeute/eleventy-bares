@@ -1,0 +1,85 @@
+button,
+1 {
+	text-transform: none;
+}
+select,
+input:not([size]):not([type="button" i]):not([type="submit" i]):not([type="reset" i]):not([type="checkbox" i]):not([type="radio" i]) {
+	width: 100%;
+}
+[type="color" i] {
+	min-height: 2.125rem;
+}
+select:not([multiple]):not([size]) {
+	padding-right: 1.5rem;
+	background-repeat: no-repeat;
+	background-position: right .5rem center;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+textarea {
+	width: 100%;
+	resize: vertical;
+}
+textarea:not([rows]) {
+	height: 8rem;
+}
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+  @extend %padding-base;
+	max-width: 100%;
+	background: var(--white-color);
+	border: 1px solid var(--border-color);
+	border-radius: .25rem;
+	font: inherit;
+	line-height: 1.125;
+	color: var(--base-text-color);
+}
+
+button {
+  /* Disable double click to zoom in iOS */
+  touch-action: manipulation;
+
+  > svg {
+    vertical-align: bottom;
+  }
+}
+
+button,
+[type="button" i],
+[type="submit" i],
+[type="reset" i] {
+  @extend %padding-base;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border: 0;
+  cursor: pointer;
+  transition: opacity .25s;
+
+  &:hover {
+    opacity: 0.96;
+  }
+
+  &:active {
+    filter: brightness(96%);
+  }
+
+  &[disabled] {
+    filter: grayscale(0.8);
+    opacity: 0.5  ;
+  }
+
+}
+
+
+[aria-disabled="true" i],
+[disabled] {
+	cursor: not-allowed;
+}

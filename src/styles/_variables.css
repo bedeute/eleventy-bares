@@ -1,0 +1,20 @@
+:root {
+  /* colors */
+  --base-background-color: #fafeff;
+  --base-text-color: #50626f;
+  --text-heading-color: #384d5c;
+  --text-subheading-color: #6e8697;
+  --main-color: #e04c7d;
+  --main-color-alt: #cd3e93;
+  --border-color: #b0c9dd;
+  --white-color: #f5fbfc;
+
+  --serif-font: 'Noto Serif', serif;
+  --sans-serif-font: 'Fira Sans', sans-serif;
+  --display-font: 'DM Serif Display', serif;
+}
+
+/* extend rule */
+%padding-base {
+  padding: .5rem .75rem;
+}
